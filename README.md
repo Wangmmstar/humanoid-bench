@@ -80,6 +80,23 @@ pip install -r requirements_tdmpc.txt
 * `h1hand-insert_normal-v0`
 * `h1hand-insert_small-v0`
 
+pip intsall mujoco
+pip intsall dm-control
+pip install gymnasium
+
+run the first test --- random policy it worked fine.
+
+HOwver, when tetsing the hierarchy policy,
+THere is an error show mujoco_structs.MjvGeom has no attribute 'texid'
+
+IT's the library version:
+Here need to set:
+pip install gymnasium==0.29.1
+pip install mujoco==3.1.6
+pip install dm-control==1.0.20
+
+THen the hierarchy policy can be run
+
 ### Test Environments with Random Actions
 ```
 python -m humanoid_bench.test_env --env h1hand-walk-v0
